@@ -1,12 +1,13 @@
 {
     "private": true,
-    "name": "@enterprise-ui/uikit",
+    "name": "@enterprise-ui/uikit-react",
     "version": "0.1.0",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
     "repository": "git@github.com:enterprise-ui/eui-react.git",
     "license": "MIT",
     "scripts": {
-      "dev": "rollup -c -w",
-      "build": "rimraf public && cross-env NODE_ENV=production rollup -c"
+      "dev": "tsc -w"
     },
     "dependencies": {
       "react": "^16.13.0",
