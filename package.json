@@ -1,0 +1,14 @@
+{
+    "name": "@enterprise-ui/eui-react",
+    "private": true,
+    "workspaces": {
+        "packages": [
+          "packages/*"
+        ]
+    },
+    "scripts": {
+    },
+    "devDependencies": {
+      "cross-env": "7.0.2"
+    }
+  }
