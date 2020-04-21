@@ -5,7 +5,7 @@ steps:
   - name: build
     image: node:current-alpine
     commands:
-      - npm config set $NPMRC
+      - npm config set ${NPMRC}
       - yarn
       - cd packages/uikit-react
       - yarn build
