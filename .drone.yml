@@ -12,5 +12,5 @@ steps:
       - yarn
       - cd packages/uikit-react
       - yarn build
-      - yarn publish
+      - npm publish
 
