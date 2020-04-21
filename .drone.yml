@@ -8,8 +8,7 @@ steps:
       NPMRC:
         from_secret: NPMRC    
     commands:   
-      - echo -e "$NPMRC" > .npmrc
-      - cat .npmrc
+      - npm config set registry $NPMREGISTRY
       - yarn
       - cd packages/uikit-react
       - yarn build
