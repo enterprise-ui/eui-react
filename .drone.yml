@@ -9,6 +9,7 @@ steps:
         from_secret: NPMRC   
     commands:   
       - npm config set $NPMRC
+      - npm config set loglevel verbose --global
       - yarn
       - cd packages/uikit-react
       - yarn build
