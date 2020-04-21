@@ -7,13 +7,10 @@ steps:
     environment:
       NPMRC:
         from_secret: NPMRC    
-    commands:
-      - echo ${NPMRC}
-      - echo $NPMRC
-      - echo NPMRC      
-      # - npm config set $NPMRC
-      # - yarn
-      # - cd packages/uikit-react
-      # - yarn build
-      # - yarn publish
+    commands:   
+      - npm config set $NPMRC
+      - yarn
+      - cd packages/uikit-react
+      - yarn build
+      - yarn publish
 
