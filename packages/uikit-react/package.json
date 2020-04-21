@@ -1,6 +1,6 @@
 {
     "name": "@enterprise-ui/uikit-react",
-    "version": "0.1.8",
+    "version": "0.1.1",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "repository": "git@github.com:enterprise-ui/eui-react.git",
