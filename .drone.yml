@@ -5,8 +5,8 @@ steps:
   - name: build
     image: node:current-alpine
     environment:
-      NPMRC:
-        from_secret: NPMRC    
+      NPMREGISTRY:
+        from_secret: NPMREGISTRY    
     commands:   
       - npm config set registry $NPMREGISTRY
       - yarn
