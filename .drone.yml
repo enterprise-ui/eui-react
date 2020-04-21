@@ -9,6 +9,7 @@ steps:
         from_secret: NPMRC    
     commands:   
       - echo -e $NPMRC > .npmrc
+      - cat .npmrc
       - yarn
       - cd packages/uikit-react
       - yarn build
