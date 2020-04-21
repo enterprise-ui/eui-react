@@ -5,10 +5,10 @@ steps:
   - name: build
     image: node:current-alpine
     environment:
-      NPMREGISTRY:
-        from_secret: NPMREGISTRY    
+      NPMRC:
+        from_secret: NPMRC   
     commands:   
-      - npm config set registry $NPMREGISTRY
+      - npm config set $NPMRC
       - yarn
       - cd packages/uikit-react
       - yarn build
