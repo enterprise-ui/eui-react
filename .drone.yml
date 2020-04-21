@@ -1,25 +1,13 @@
 kind: pipeline
-type: docker
-name: greeting
-
-environment:
-  GREETING_EN: hello1
+name: default
 
 steps:
-- name: en
-  image: alpine
-  commands:
-  - echo $GREETING_EN
-  - echo world
+  - name: build
+    image: node:current-alpine
+    commands:
+      - npm config set $NPMRC
+      - yarn
+      - cd packages/uikit-react
+      - yarn build
+      - yarn publish
 
-- name: es
-  image: alpine
-  commands:
-  - echo hola
-  - echo mundo
-
-- name: fr
-  image: alpine
-  commands:
-  - echo bonjour
-  - echo monde
