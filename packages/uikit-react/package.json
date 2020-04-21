@@ -1,5 +1,4 @@
 {
-    "private": true,
     "name": "@enterprise-ui/uikit-react",
     "version": "0.1.0",
     "main": "dist/index.js",
