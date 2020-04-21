@@ -8,7 +8,7 @@
     "license": "MIT",
     "scripts": {
       "dev": "tsc -w",
-      "build": "tcs"
+      "build": "tsc"
     },
     "dependencies": {
       "react": "^16.13.0",

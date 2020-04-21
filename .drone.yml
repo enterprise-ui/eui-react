@@ -4,8 +4,11 @@ name: default
 steps:
   - name: build
     image: node:current-alpine
+    environment:
+      NPMRC:
+        from_secret: NPMRC    
     commands:
-      - npm config set NPMRC
+      - npm config set $NPMRC
       - yarn
       - cd packages/uikit-react
       - yarn build
