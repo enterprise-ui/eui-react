@@ -1,0 +1,21 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: build
+    image: node:current-alpine
+    environment:
+      CI_DOMAIN:
+        from_secret: CI_DOMAIN
+      NPM_AUTH_TOKEN:
+        from_secret: NPM_AUTH_TOKEN
+    commands:
+      - echo "//$CI_DOMAIN/repository/npm/:_authToken=$NPM_AUTH_TOKEN" > .npmrc
+      - echo "//$CI_DOMAIN/repository/npm-publish/:_authToken=$NPM_AUTH_TOKEN" >> .npmrc
+      - echo "registry=https://$CI_DOMAIN/repository/npm" >> .npmrc
+      - echo "always-auth=true" >> .npmrc   
+      - yarn
+      - cd packages/uikit-react
+      - yarn build
+      - yarn publish --registry="https://$CI_DOMAIN/repository/npm-publish"
+
